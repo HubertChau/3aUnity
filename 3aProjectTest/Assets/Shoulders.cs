@@ -9,7 +9,7 @@ public class Shoulders : MonoBehaviour
     [SerializeField]public GameObject LeftShoulder;
     public TextAsset Angles_LeftShoulder;
 
-    [SerializeField] public GameObject Ribs;
+    /*[SerializeField] public GameObject Ribs;
     public TextAsset Ribs_Text;
 
     [SerializeField] public GameObject Neck;
@@ -50,7 +50,7 @@ public class Shoulders : MonoBehaviour
 
     [SerializeField] public GameObject LElbow;
     public TextAsset LElbow_Text;
-
+    */
 
     // Start is called before the first frame update
     void Start()
@@ -71,10 +71,10 @@ public class Shoulders : MonoBehaviour
         {
             string[] fieldsLeftShoulder = recordsLeftShoulder[i].Split(',');
             LeftShoulder.transform.Rotate(float.Parse(fieldsLeftShoulder[1]), float.Parse(fieldsLeftShoulder[2]), float.Parse(fieldsLeftShoulder[3]));
-            LeftShoulder.transform.position = new Vector3(float.Parse(fieldsLeftShoulder[1]), float.Parse(fieldsLeftShoulder[2]), float.Parse(fieldsLeftShoulder[3]));
+            //LeftShoulder.transform.position = new Vector3(float.Parse(fieldsLeftShoulder[1]), float.Parse(fieldsLeftShoulder[2]), float.Parse(fieldsLeftShoulder[3]));
         }
 
-        string[] recordsRightShoulder = Angles_RightShoulder.text.Split('\n');
+        /*string[] recordsRightShoulder = Angles_RightShoulder.text.Split('\n');
         for (int i = 1; i < recordsRightShoulder.Length - 1; i++)
         {
             string[] fieldsRightShoulder = recordsRightShoulder[i].Split(',');
@@ -89,7 +89,7 @@ public class Shoulders : MonoBehaviour
             Ribs.transform.Rotate(float.Parse(fieldsChest[1]), float.Parse(fieldsChest[2]), float.Parse(fieldsChest[3]));
             Ribs.transform.position = new Vector3(float.Parse(fieldsChest[1]), float.Parse(fieldsChest[2]), float.Parse(fieldsChest[3]));
         }
-
+        */
     }
 
 }
